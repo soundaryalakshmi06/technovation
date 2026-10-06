@@ -1,0 +1,38 @@
+# ---------- Python ----------
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# ---------- Node / frontend ----------
+node_modules/
+frontend/dist/
+
+# ---------- Large files ----------
+videos/
+*.mp4
+*.avi
+*.mov
+*.webm
+*.pt
+
+# ---------- Generated output (clips, logs, WhatsApp login!) ----------
+output/
+run_log*.txt
+*.log
+
+# ---------- Local databases / learned data ----------
+src/player_identifications.db
+*.db
+known_players_auto/
+known_players/
+
+# ---------- DeepFace / secrets / editor ----------
+.deepface/
+.env
+frontend/.env.local
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store

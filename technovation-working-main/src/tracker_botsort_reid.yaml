@@ -1,0 +1,18 @@
+# BoT-SORT tracker with appearance re-identification (ReID), tuned for broadcast football.
+# Used by multi_player_injury.py via TRACKER_CONFIG.
+
+tracker_type: botsort
+
+track_high_thresh: 0.25     # detections above this are matched first
+track_low_thresh: 0.1       # low-confidence detections still used to keep existing tracks alive
+new_track_thresh: 0.4       # higher = fewer brand-new track numbers (existing ones are reused)
+track_buffer: 90            # a lost player is remembered for 90 frames (3 s at 30 fps)
+match_thresh: 0.8
+fuse_score: True
+
+gmc_method: sparseOptFlow   # compensates for camera panning / zoom
+
+proximity_thresh: 0.5
+appearance_thresh: 0.8
+with_reid: True             # match players by how they look, not only where their box is
+model: yolo11n-cls.pt       # small appearance model, downloaded automatically on first run

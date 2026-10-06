@@ -1,0 +1,26 @@
+# ---------- Backend ----------
+fastapi
+python-multipart
+uvicorn[standard]
+sqlalchemy
+psycopg2-binary
+pydantic
+python-jose[cryptography]
+passlib[bcrypt]
+bcrypt==4.0.1
+
+# ---------- Detection ----------
+# For GPU: install the CUDA build of torch FIRST from pytorch.org,
+# otherwise ultralytics pulls in the CPU-only build.
+ultralytics
+opencv-python
+numpy
+requests
+
+# ---------- Player identification (jersey + face) ----------
+easyocr
+deepface
+tf-keras
+
+# ---------- WhatsApp alerts ----------
+selenium
